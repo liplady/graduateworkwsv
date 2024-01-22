@@ -5,6 +5,11 @@ body {
   font-size: 14px;
   line-height: 20px;
   color: #444444;
+  display:flex;
+}
+#canvas_plot {
+margin:auto;
+background:#666666;
 }
 
 h1 {
