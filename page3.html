@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>&</title>
+</head>
+
+<body>
+  <p style="text-align: center">
+
+	<button>кнопка</button>
+	<p>ода попкорн</p>
+
+	<style>
+		body {
+			height: 200px;
+			background: white;
+		}
+
+		.dot {
+			height: 8px;
+			width: 8px;
+			border-radius: 4px;
+			/* скруглённые углы */
+			background: blue;
+			position: absolute;
+		}
+	</style>
+
+
+
+	<img id="myImg" src="https://animals.pibig.info/uploads/posts/2023-04/1680665633_animals-pibig-info-p-umolyayushchii-kotik-zhivotnie-oboi-40.jpg" style="position: relative" widht="100" height="100">
+</p>
+
+	<head>
+		<style>
+			#train {
+				position: relative;
+				cursor: pointer;
+			}
+		</style>
+	</head>
+
+	<body>
+
+		<img id="train" src="https://zoopt.ru/upload/iblock/224/b6dc9ef9_fb35_11e5_b940_0050569518a8_5335.png" widht="200" height="200">
+
+
+		<script>
+train.onclick = function() {
+      let start = Date.now();
+
+	let timer = setInterval(function() {
+	let timePassed = Date.now() - start;
+
+train.style.left = timePassed / -60 + 'px';
+train.style.top = timePassed / 50 + 'px';
+
+		if (timePassed > 2000) clearInterval(timer);
+
+      }, 20);
+    }
+		</script>
+
+
+
+
+	</html>
+	<script>
+		var cat = document.querySelector("img");
+var angle = 0, lastTime = null;
+function animate(time) {
+if (lastTime != null)
+angle += (time - lastTime) * 0.001;
+lastTime = time;
+cat.style.top = (Math.sin(angle) * 300) + "px";
+cat.style.left = (Math.cos(angle) * 300) + "px";
+requestAnimationFrame(animate);
+}
+
+var button = document.querySelector("button");
+button.addEventListener("click", function() {
+alert("Маловато будет!");
+});
+
+document.getElementById('myImg').onclick = myFunction;
+
+function myFunction() {
+  alert('Ouch!!!');
+}
+
+
+requestAnimationFrame(animate);
+
+	</script>
+	</style>
+	<p1>
+
+
+		<img id="myImg" src="" style="position: relative">
+	</p1>
+
+
+		</body>
