@@ -3,8 +3,8 @@ body {
   padding: 0;
   font-family: "Arial", sans-serif;
   font-size: 24px;
-  line-height: 20px;
-  color: #444444;
+  line-height: 24px;
+  color: #4682B4;
 }
 
 h1 {
@@ -15,30 +15,33 @@ h1 {
   font-weight: normal;
   font-size: 56px;
   line-height: 64px;
+  color: #4682B4;
 }
 
 h2 {
   border-bottom: 2px solid #cccccc;
   padding-bottom: 12px;
+  color: #4682B4;
 }
 
-.container {
+h3 {
   width: 510px;
   margin: 0 auto;
   padding: 0 20px;
+  color: #2d5373;
 }
 
-.site-header {
+h4 {
   min-width: 550px;
   height: 186px;
   margin-bottom: 70px;
   padding-top: 30px;
   background: #ffffff;
   background-size: cover;
-  color: #4682B4;
+  color: #2d5373;
 }
 
-.site-header p {
+f5 p {
   width: 255px;
   margin: 0 auto 26px;
   text-align: center;
@@ -47,7 +50,7 @@ h2 {
   color: #2d5373;
 }
 
-.site-header img {
+.features img {
   display: block;
   margin: 0 auto;
 }
@@ -108,6 +111,24 @@ h2 {
   border-color: #4682B4;
   color: #2d5373;
 }
+.clients {
+  width: 510px;
+  margin: 0 auto 40px;
+  padding: 0 20px;
+  color: #2d5373;
+}
+
+.clients-list {
+  padding: 0;
+  list-style: none;
+  color: #2d5373;
+}
+
+.clients-item {
+  margin-bottom: 15px;
+  padding-left: 20px;
+  border-left: 20px solid #c4c178;
+  color: #2d5373;
 
 
 .site-footer {
