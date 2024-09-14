@@ -33,9 +33,9 @@ h2 {
   height: 186px;
   margin-bottom: 70px;
   padding-top: 30px;
-  background: #847462 no-repeat center url("img/gloevk-bg.jpg");
+  background: #ffffff;
   background-size: cover;
-  color: #ffffff;
+  color: #4682B4;
 }
 
 .site-header p {
