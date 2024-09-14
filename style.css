@@ -43,7 +43,8 @@ h2 {
   margin: 0 auto 26px;
   text-align: center;
   font-size: 16px;
-  line-height: 24px; 
+  line-height: 24px;
+  color: #2d5373;
 }
 
 .site-header img {
@@ -65,48 +66,54 @@ h2 {
   background-repeat: no-repeat;
   background-position: center top;
   text-align: center;
+  color: #2d5373;
 }
 
 .feature-furniture {
   padding-top: 65px;
+  color: #2d5373;
 }
 
 .feature-lighting {
   padding-top: 65px;
+  color: #2d5373;
 }
 
 .feature-accessories {
   padding-top: 65px;
+  color: #2d5373;
 }
 
 .advantages {
   width: 510px;
   margin: 0 auto 40px;
   padding: 0 20px;
+  color: #2d5373;
 }
 
 .advantages-list {
   padding: 0;
-  list-style: none;  
+  list-style: none;
+  color: #2d5373;
 }
 
 .advantages-item {
   margin-bottom: 15px;
   padding-left: 20px;
-  border-left: 20px solid #e2e2e2;
-  color: #999999;
+  border-left: 20px solid #c4c178;
+  color: #2d5373;
 }
 
 .standard {
   border-color: #4682B4;
-  color: #6a6a6a;
+  color: #2d5373;
 }
 
 
 .site-footer {
   min-width: 550px;
-  background-color: #4682B4;
-  color: #ffffff;
+  background-color: #78b1c4;
+  color: #2d5373;
 }
 
 .site-footer .container {
