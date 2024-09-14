@@ -5,6 +5,7 @@ body {
   font-size: 24px;
   line-height: 24px;
   color: #4682B4;
+  text-align: center;
 }
 
 h1 {
@@ -16,12 +17,14 @@ h1 {
   font-size: 56px;
   line-height: 64px;
   color: #4682B4;
+  text-align: center;
 }
 
 h2 {
   border-bottom: 2px solid #cccccc;
   padding-bottom: 12px;
   color: #4682B4;
+  text-align: center;
 }
 
 h3 {
@@ -29,6 +32,7 @@ h3 {
   margin: 0 auto;
   padding: 0 20px;
   color: #2d5373;
+  text-align: center;
 }
 
 h4 {
@@ -39,6 +43,7 @@ h4 {
   background: #ffffff;
   background-size: cover;
   color: #2d5373;
+  text-align: center;
 }
 
 f5 p {
@@ -48,6 +53,7 @@ f5 p {
   font-size: 16px;
   line-height: 24px;
   color: #2d5373;
+  text-align: center;
 }
 
 .features img {
