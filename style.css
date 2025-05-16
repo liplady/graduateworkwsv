@@ -1,0 +1,239 @@
+body {
+  font-family: 'Arial', Questrial;
+  margin: 0;
+  padding: 0;
+  background-color: #f0f4f8; /* Светло-серый фон */
+  color: #333;
+  line-height: 1.6;
+}
+
+.container {
+  width: 80%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Заголовок */
+header {
+  background-color: #455a64; /* Темно-серый */
+  color: #fff;
+  padding: 40px 0;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 1em;
+}
+
+header h1 {
+  font-size: 3em;
+  margin-bottom: 10px;
+}
+
+header .subtitle {
+  font-size: 1.2em;
+  color: #b0bec5; /* Светло-серый текст */
+}
+
+header .author-info {
+  margin-top: 20px;
+  font-size: 0.9em;
+}
+
+/* Навигация (скрыта, если сайт одностраничный) */
+nav {
+display: none; /*  Скрываем навигацию, так как сайт одностраничный.
+                      Если хотите добавить навигацию по секциям, раскомментируйте */
+  background-color: #37474f;
+  padding: 10px 0;
+  text-align: center;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 20px;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+  background-color: #263238;
+}
+
+/* Основное содержание */
+main {
+  padding: 40px 0;
+}
+
+.section {
+  background-color: #fff;
+  margin-bottom: 30px;
+  padding: 30px;
+  border-radius: 5px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.section h2 {
+  font-size: 2.2em;
+  margin-bottom: 20px;
+  color: #37474f;
+  border-bottom: 2px solid #b0bec5;
+  padding-bottom: 10px;
+}
+
+/* Нумерованный список */
+ol {
+  padding-left: 20px;
+}
+
+ol li {
+  margin-bottom: 10px;
+}
+
+ol li strong {
+  color: #455a64;
+}
+
+/* Дизайн */
+.design-details {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.design-detail {
+  width: 48%;
+}
+
+.design-detail h3 {
+  font-size: 1.6em;
+  margin-bottom: 10px;
+  color: #37474f;
+}
+
+.color-palette {
+  display: flex;
+}
+
+.color-box {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+  border-radius: 5px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.color-primary {
+  background-color: #607d8b;  /*  Синий  */
+}
+
+.color-secondary {
+  background-color: #78909c;  /*  Серо-синий  */
+}
+
+.color-accent {
+  background-color: #90a4ae;  /*  Светло-серый  */
+}
+
+.color-neutral {
+  background-color: #cfd8dc;  /*  Очень светло-серый  */
+}
+
+.mockups {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.mockups img {
+  width: 45%;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Кнопка */
+.button {
+  display: inline-block;
+  background-color: #607d8b;
+  color: #fff;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: #455a64;
+}
+
+/* Подвал */
+footer {
+  background-color: #37474f;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+}
+
+/* Кнопка "Наверх" */
+.scroll-top-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #607d8b;
+  color: #fff;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 40px;
+  font-size: 1.5em;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.scroll-top-btn.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .container {
+      width: 95%;
+  }
+
+  header h1 {
+      font-size: 2.5em;
+  }
+
+  .section h2 {
+      font-size: 2em;
+  }
+
+  .design-details {
+      flex-direction: column;
+  }
+
+  .design-detail {
+      width: 100%;
+      margin-bottom: 20px;
+  }
+
+  .mockups img {
+      width: 100%;
+  }
+}
+    }
+
+    .mockups img {
+        width: 100%;
+    }
+}

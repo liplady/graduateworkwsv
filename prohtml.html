@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML для Новичков: Ваш Путь к Созданию Сайтов</title>
+     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+        }
+
+        h1, h2, h3 {
+            color: #333;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            font-size: 1.8em;
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+
+        h3 {
+            font-size: 1.4em;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+
+        p {
+            margin-bottom: 15px;
+        }
+
+        pre {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border: 1px solid #ddd;
+            overflow-x: auto;
+        }
+
+        code {
+            font-family: monospace;
+            font-size: 1em;
+        }
+
+        a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .section {
+            margin-bottom: 40px;
+            padding: 20px;
+            border: 1px solid #eee;
+            background-color: #f9f9f9;
+        }
+
+        .section h2 {
+            border-bottom: 2px solid #ccc;
+            padding-bottom: 10px;
+        }
+
+        ul {
+            list-style-type: disc;
+            margin-left: 20px;
+        }
+
+        ol {
+            list-style-type: decimal;
+            margin-left: 20px;
+        }
+
+        .example {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>HTML для Новичков: Ваш Путь к Созданию Сайтов</h1>
+
+    <div class="section">
+        <h2>Что такое HTML?</h2>
+        <p>
+            HTML (HyperText Markup Language) — это язык разметки, который используется для создания структуры веб-страниц. HTML сообщает браузеру, как отображать текст, изображения, ссылки и другие элементы.  Это основа любого веб-сайта.
+        </p>
+        <p>
+            Представьте себе, что HTML - это скелет вашего сайта. Он определяет, какие элементы отображаются на странице и как они расположены. CSS используется для стилизации этих элементов, а JavaScript добавляет интерактивность.
+        </p>
+    </div>
+
+    <div class="section">
+    <h2>Базовая структура HTML-документа</h2>
+    <p>
+        Каждый HTML-документ должен иметь определенную структуру. Вот пример базового HTML-документа:
+    </p>
+
+    <pre><code>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="ru"&gt;
+&lt;head&gt;
+&lt;meta charset="UTF-8"&gt;
+&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+&lt;title&gt;Заголовок страницы&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;h1&gt;Привет, мир!&lt;/h1&gt;
+&lt;p&gt;Это мой первый HTML-документ.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+    </code></pre>
+
+    <p>Разберем каждый элемент:</p>
+
+    <ul>
+        <li><code>&lt;!DOCTYPE html&gt;</code>:  Сообщает браузеру, что это HTML5 документ.  Всегда должен быть первым элементом в HTML-файле.</li>
+        <li><code>&lt;html&gt;</code>:  Корневой элемент HTML-документа.  Содержит все остальные элементы.  Атрибут `lang` указывает язык документа (в данном случае, русский).</li>
+        <li><code>&lt;head&gt;</code>:  Содержит метаданные о документе, такие как заголовок, кодировку, стили и скрипты.  Эта информация не отображается на странице.
+            <ul>
+                <li><code>&lt;meta charset="UTF-8"&gt;</code>:  Указывает кодировку символов для документа.  UTF-8 поддерживает большинство символов, включая русские.</li>
+                <li><code>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</code>:  Конфигурирует viewport для правильного отображения страницы на разных устройствах.</li>
+                <li><code>&lt;title&gt;</code>:  Заголовок страницы, который отображается на вкладке браузера.</li>
+            </ul>
+        </li>
+        <li><code>&lt;body&gt;</code>:  Содержит содержимое страницы, которое отображается в браузере.
+            <ul>
+                <li><code>&lt;h1&gt;</code>:  Заголовок первого уровня.</li>
+                <li><code>&lt;p&gt;</code>:  Параграф текста.</li>
+            </ul>
+        </li>
+    </ul>
+</div>
+
+<div class="section">
+    <h2>Основные HTML-теги</h2>
+    <p>
+    HTML-теги используются для создания элементов на странице.  Большинство тегов имеют открывающий и закрывающий тег (например, <code>&lt;p&gt;</code> и <code>&lt;/p&gt;</code>).  Некоторые теги, такие как <code>&lt;img&gt;</code>, являются одиночными и не имеют закрывающего тега.
+  </p>
+
+  <h3>Основные HTML-теги:</h3>
+  <ul>
+      <li><strong>Заголовки:</strong> <code>&lt;h1&gt;</code>, <code>&lt;h2&gt;</code>, <code>&lt;h3&gt;</code>, <code>&lt;h4&gt;</code>, <code>&lt;h5&gt;</code>, <code>&lt;h6&gt;</code>.  Используются для создания заголовков разного уровня.</li>
+      <li><strong>Параграфы:</strong> <code>&lt;p&gt;</code>.  Используются для создания параграфов текста.</li>
+      <li><strong>Ссылки:</strong> <code>&lt;a&gt;</code>.  Используются для создания ссылок на другие страницы или ресурсы.  Атрибут <code>href</code> указывает URL ссылки.</li>
+      <li><strong>Изображения:</strong> <code>&lt;img&gt;</code>.  Используются для вставки изображений.  Атрибут <code>src</code> указывает URL изображения, а атрибут <code>alt</code> предоставляет альтернативный текст для изображения.</li>
+      <li><strong>Списки:</strong>
+          <ul>
+              <li><code>&lt;ul&gt;</code>:  Неупорядоченный список (с маркерами).</li>
+              <li><code>&lt;ol&gt;</code>:  Упорядоченный список (с номерами).</li>
+              <li><code>&lt;li&gt;</code>:  Элемент списка.</li>
+          </ul>
+      </li>
+      <li><strong>Разделители:</strong> <code>&lt;div&gt;</code>, <code>&lt;span&gt;</code>.  Используются для группировки элементов и применения к ним стилей.  <code>&lt;div&gt;</code> создает блочный элемент, а <code>&lt;span&gt;</code> создает строчный элемент.</li>
+      <li><strong>Таблицы:</strong>
+          <ul>
+              <li><code>&lt;table&gt;</code>:  Таблица.</li>
+              <li><code>&lt;tr&gt;</code>:  Строка таблицы.</li>
+              <li><code>&lt;th&gt;</code>:  Заголовочная ячейка таблицы.</li>
+              <li><code>&lt;td&gt;</code>:  Ячейка таблицы.</li>
+          </ul>
+      </li>
+      <li><strong>Формы:</strong>
+          <ul>
+              <li><code>&lt;form&gt;</code>:  Форма.</li>
+              <li><code>&lt;input&gt;</code>:  Поле ввода.  Может быть разных типов (text, password, email, submit, radio, checkbox и т.д.).</li>
+              <li><code>&lt;textarea&gt;</code>:  Многострочное текстовое поле.</li>
+              <li><code>&lt;select&gt;</code>:  Выпадающий список.</li>
+              <li><code>&lt;button&gt;</code>:  Кнопка.</li>
+          </ul>
+      </li>
+      <li><strong>Атрибуты:</strong> Атрибуты предоставляют дополнительную информацию об элементах. Например, `id`, `class`, `style`, `src`, `href`, `alt` и другие.</li>
+  </ul>
+
+  <h3>Примеры HTML-тегов:</h3>
+  <pre><code>
+&lt;h1&gt;Это заголовок&lt;/h1&gt;
+&lt;p&gt;Это параграф текста.&lt;/p&gt;
+&lt;a href="https://www.example.com"&gt;Ссылка на Example.com&lt;/a&gt;
+&lt;img src="image.jpg" alt="Описание изображения"&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Элемент 1&lt;/li&gt;
+&lt;li&gt;Элемент 2&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class="container"&gt;
+&lt;p&gt;Содержимое контейнера.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;table&gt;
+&lt;tr&gt;
+&lt;th&gt;Заголовок 1&lt;/th&gt;
+&lt;th&gt;Заголовок 2&lt;/th&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Ячейка 1&lt;/td&gt;
+&lt;td&gt;Ячейка 2&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/table&gt;
+
+&lt;form&gt;
+&lt;label for="name"&gt;Имя:&lt;/label&gt;
+&lt;input type="text" id="name" name="name"&gt;
+&lt;button type="submit"&gt;Отправить&lt;/button&gt;
+&lt;/form&gt;
+  </code></pre>
+</div>
+
+<div class="section">
+  <h2>Атрибуты HTML</h2>
+  <p>
+      Атрибуты предоставляют дополнительную информацию об HTML-элементах. Они всегда указываются в открывающем теге элемента.
+  </p>
+
+  <h3>Основные атрибуты:</h3>
+  <ul>
+      <li><code>id</code>:  Уникальный идентификатор элемента.  Используется для стилизации и манипулирования элементом с помощью CSS и JavaScript.  Значение `id` должно быть уникальным в пределах HTML-документа.</li>
+      <li><code>class</code>:  Класс элемента.  Используется для стилизации группы элементов с помощью CSS.  Несколько элементов могут иметь один и тот же класс.</li>
+      <li><code>style</code>:  Встроенные стили CSS для элемента.  Не рекомендуется использовать для больших проектов, так как усложняет поддержку.</li>
+      <li><code>src</code>:  URL изображения для элемента <code>&lt;img&gt;</code>.</li>
+      <li><code>href</code>:  URL ссылки для элемента <code>&lt;a&gt;</code>.</li>
+      <li><code>alt</code>:  Альтернативный текст для элемента <code>&lt;img&gt;</code>.  Отображается, если изображение не может быть загружено, и используется для SEO.</li>
+      <li><code>title</code>:  Всплывающая подсказка, которая отображается при наведении курсора на элемент.</li>
+      <li><code>width</code> и <code>height</code>:  Ширина и высота элемента.  Могут использоваться для элементов <code>&lt;img&gt;</code>, <code>&lt;video&gt;</code> и других.</li>
+      <li><code>name</code>: Имя элемента формы. Используется для отправки данных формы на сервер.</li>
+      <li><code>value</code>: Значение элемента формы.</li>
+  </ul>
+
+  <h3>Примеры использования атрибутов:</h3>
+  <pre><code>
+&lt;h1 id="main-title" class="title" style="color: blue;"&gt;Заголовок&lt;/h1&gt;
+&lt;img src="image.jpg" alt="Описание изображения" width="200" height="150"&gt;
+&lt;a href="https://www.example.com" title="Перейти на Example.com"&gt;Ссылка&lt;/a&gt;
+
+&lt;form&gt;
+&lt;label for="email"&gt;Email:&lt;/label&gt;
+&lt;input type="email" id="email" name="email" value="example@example.com"&gt;
+&lt;/form&gt;
+  </code></pre>
+</div>
+
+<div class="section">
+  <h2>Семантическая разметка</h2>
+  <p>
+      Семантическая разметка — это использование HTML-тегов для определения *значения* содержимого, а не только его внешнего вида. Это делает ваш код более читаемым, понятным для поисковых систем и более доступным для пользователей с ограниченными возможностями.
+  </p>
+
+  <h3>Примеры семантических тегов:</h3>
+  <ul>
+      <li><code>&lt;header&gt;</code>:  Заголовок сайта или раздела.</li>
+      <li><code>&lt;nav&gt;</code>:  Навигационное меню.</li>
+      <li><code>&lt;main&gt;</code>:  Основное содержимое страницы.</li>
+      <li><code>&lt;article&gt;</code>:  Независимый контент (например, статья в блоге).</li>
+      <li><code>&lt;aside&gt;</code>:  Боковая панель или дополнительная информация.</li>
+      <li><code>&lt;footer&gt;</code>:  Подвал сайта или раздела.</li>
+  </ul>
+
+  <h3>Пример использования семантической разметки:</h3>
+  <pre><code>
+&lt;header&gt;
+&lt;h1&gt;Название сайта&lt;/h1&gt;
+&lt;nav&gt;
+  &lt;ul&gt;
+      &lt;li&gt;&lt;a href="#"&gt;Главная&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="#"&gt;О нас&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="#"&gt;Контакты&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;
+&lt;/header&gt;
+
+&lt;main&gt;
+&lt;article&gt;
+  &lt;h2&gt;Заголовок статьи&lt;/h2&gt;
+  &lt;p&gt;Текст статьи.&lt;/p&gt;
+&lt;/article&gt;
+
+&lt;aside&gt;
+  &lt;h3&gt;Полезные ссылки&lt;/h3&gt;
+  &lt;ul&gt;
+      &lt;li&gt;&lt;a href="#"&gt;Ссылка 1&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="#"&gt;Ссылка 2&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/aside&gt;
+&lt;/main&gt;
+
+&lt;footer&gt;
+&lt;p&gt;© 2023 Все права защищены&lt;/p&gt;
+&lt;/footer&gt;
+  </code></pre>
+</div>
+
+<div class="section">
+  <h2>Советы и Ресурсы для Новичков</h2>
+
+  <ul>
+      <li><strong>Валидация HTML:</strong> Используйте онлайн-валидаторы, чтобы проверить свой HTML-код на соответствие стандартам. Это поможет выявить ошибки и улучшить качество вашего кода. (например, <a href="https://validator.w3.org/" target="_blank">W3C Markup Validation Service</a>)</li>
+      <li><strong>Используйте инструменты разработчика в браузере.</strong> Они позволяют вам видеть, как отображается HTML, и экспериментировать с ним в режиме реального времени.</li>
+      <li><strong>Читайте документацию MDN Web Docs.</strong> Это самый полный и авторитетный ресурс по HTML, CSS и JavaScript.  <a href="https://developer.mozilla.org/ru/docs/Web/HTML" target="_blank">https://developer.mozilla.org/ru/docs/Web/HTML</a></li>
+      <li><strong>Смотрите видео уроки и онлайн-курсы.</strong>  Существует множество бесплатных и платных ресурсов, которые помогут вам освоить HTML.</li>
+      <li><strong>Адаптивная верстка (Responsive Design):</strong>  Убедитесь, что ваши веб-страницы хорошо отображаются на разных устройствах (компьютерах, планшетах, смартфонах).  Используйте метатег `viewport` и CSS media queries.</li>
+  </ul>
+</div>
+
+</body>
+</html>

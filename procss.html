@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS для Новичков: Как Сделать Ваш Сайт Красивым?</title>
+     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+        }
+
+        h1, h2, h3 {
+            color: #333;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            font-size: 1.8em;
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+
+        h3 {
+            font-size: 1.4em;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+
+        p {
+            margin-bottom: 15px;
+        }
+
+        pre {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border: 1px solid #ddd;
+            overflow-x: auto; /* Добавляет горизонтальную прокрутку для длинного кода */
+        }
+
+        code {
+            font-family: monospace;
+            font-size: 1em;
+        }
+
+        a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* Стили для секций */
+        .section {
+            margin-bottom: 40px;
+            padding: 20px;
+            border: 1px solid #eee;
+            background-color: #f9f9f9;
+        }
+
+        .section h2 {
+            border-bottom: 2px solid #ccc;
+            padding-bottom: 10px;
+        }
+
+        /* Стили для списков */
+        ul {
+            list-style-type: disc; /* Маркеры в виде точек */
+            margin-left: 20px;
+        }
+
+        ol {
+            list-style-type: decimal; /* Нумерованный список */
+            margin-left: 20px;
+        }
+
+        /* Стили для примеров */
+        .example {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>CSS для Новичков: Как Сделать Ваш Сайт Красивым?</h1>
+
+    <div class="section">
+        <h2>Что такое CSS?</h2>
+        <p>
+        CSS (Cascading Style Sheets) — это язык стилей, который описывает, как элементы HTML должны отображаться на экране, бумаге или в других медиа.  CSS позволяет вам контролировать цвет, шрифт, размер текста, расположение элементов и многое другое.  Использование CSS позволяет отделить структуру вашего сайта (HTML) от его внешнего вида (CSS), что значительно упрощает поддержку и обновление сайта.
+        </p>
+  </div>
+
+  <div class="section">
+      <h2>Как подключить CSS к HTML?</h2>
+      <p>Существует три основных способа подключения CSS к HTML:</p>
+
+      <ol>
+          <li><strong>Встроенный CSS (Inline CSS):</strong> Стили применяются непосредственно к HTML-элементу с помощью атрибута <code>style</code>. <strong>Не рекомендуется</strong> для больших проектов, так как усложняет поддержку.</li>
+          <li><strong>Внутренний CSS (Internal CSS):</strong> Стили помещаются в тег <code>&lt;style&gt;</code> внутри тега <code>&lt;head&gt;</code> HTML-документа.  Подходит для небольших страниц, но не для крупных сайтов.</li>
+          <li><strong>Внешний CSS (External CSS):</strong> Стили хранятся в отдельном файле с расширением <code>.css</code> и подключаются к HTML-документу с помощью тега <code>&lt;link&gt;</code> в теге <code>&lt;head&gt;</code>.  <strong>Рекомендуется</strong> для больших проектов, так как обеспечивает лучшую организацию и возможность повторного использования стилей.</li>
+      </ol>
+
+      <h3>Пример 1: Встроенный CSS</h3>
+      <pre><code>&lt;p style="color: blue; font-size: 16px;"&gt;Этот текст будет синим и 16 пикселей.&lt;/p&gt;</code></pre>
+
+      <h3>Пример 2: Внутренний CSS</h3>
+      <pre><code>
+&lt;head&gt;
+  &lt;title&gt;Внутренний CSS&lt;/title&gt;
+  &lt;style&gt;
+      p {
+          color: green;
+          font-size: 18px;
+      }
+  &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;p&gt;Этот текст будет зеленым и 18 пикселей.&lt;/p&gt;
+&lt;/body&gt;
+      </code></pre>
+
+      <h3>Пример 3: Внешний CSS</h3>
+      <p>
+      1. Создайте файл <code>style.css</code> и добавьте в него стили:
+    </p>
+    <pre><code>
+p {
+color: red;
+font-size: 20px;
+}
+    </code></pre>
+    <p>
+        2. Подключите файл <code>style.css</code> к HTML-документу:
+    </p>
+    <pre><code>
+&lt;head&gt;
+&lt;title&gt;Внешний CSS&lt;/title&gt;
+&lt;link rel="stylesheet" href="style.css"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;p&gt;Этот текст будет красным и 20 пикселей.&lt;/p&gt;
+&lt;/body&gt;
+    </code></pre>
+</div>
+
+<div class="section">
+    <h2>Основные CSS-правила</h2>
+    <p>
+        CSS-правило состоит из селектора и блока объявлений. Селектор указывает, к какому элементу HTML применяются стили. Блок объявлений содержит одно или несколько объявлений, каждое из которых состоит из свойства и значения.
+    </p>
+
+    <pre><code>
+/* Пример CSS-правила */
+p { /* Селектор: все элементы &lt;p&gt; */
+color: blue; /* Свойство: color, Значение: blue */
+font-size: 16px; /* Свойство: font-size, Значение: 16px */
+}
+    </code></pre>
+
+    <h3>Основные типы селекторов:</h3>
+    <ul>
+        <li><strong>Селектор элемента (Element Selector):</strong> Выбирает все элементы указанного типа (например, <code>p</code>, <code>h1</code>, <code>div</code>).</li>
+        <li><strong>Селектор класса (Class Selector):</strong> Выбирает все элементы с указанным классом (например, <code>.highlight</code>).</li>
+        <li><strong>Селектор ID (ID Selector):</strong> Выбирает элемент с указанным ID (например, <code>#header</code>).  ID должны быть уникальными на странице.</li>
+        <li><strong>Универсальный селектор (Universal Selector):</strong> Выбирает все элементы (<code>*</code>).</li>
+        <li><strong>Селекторы атрибутов (Attribute Selectors):</strong> Выбирают элементы на основе их атрибутов (например, <code>a[href]</code>).</li>
+    </ul>
+
+    <h3>Примеры селекторов:</h3>
+    <pre><code>
+/* Селектор элемента */
+p {
+color: red;
+}
+
+/* Селектор класса */
+.highlight {
+background-color: yellow;
+}
+
+/* Селектор ID */
+#main-title {
+font-size: 24px;
+}
+
+/* Универсальный селектор (будьте осторожны с его использованием!) */
+* {
+margin: 0;
+padding: 0;
+}
+
+/* Селектор атрибута */
+a[href="https://www.example.com"] {
+color: green;
+}
+    </code></pre>
+</div>
+
+<div class="section">
+    <h2>Важные CSS-свойства</h2>
+    <p>
+        Существует множество CSS-свойств, но вот некоторые из наиболее важных и часто используемых:
+    </p>
+
+    <ul>
+        <li><code>color</code>:  Цвет текста.</li>
+        <li><code>font-size</code>:  Размер шрифта.</li>
+        <li><code>font-family</code>:  Шрифт.</li>
+        <li><code>background-color</code>:  Цвет фона.</li>
+        <li><code>width</code>:  Ширина элемента.</li>
+        <li><code>height</code>:  Высота элемента.</li>
+        <li><code>margin</code>:  Внешний отступ.  Определяет пространство вокруг элемента.</li>
+        <li><code>padding</code>:  Внутренний отступ.  Определяет пространство внутри элемента между его содержимым и границей.</li>
+        <li><code>border</code>:  Граница элемента.</li>
+        <li><code>text-align</code>:  Выравнивание текста.</li>
+        <li><code>display</code>: Определяет, как элемент отображается (например, <code>block</code>, <code>inline</code>, <code>inline-block</code>, <code>flex</code>, <code>grid</code>).</li>
+        <li><code>position</code>:  Определяет позиционирование элемента (например, <code>static</code>, <code>relative</code>, <code>absolute</code>, <code>fixed</code>).</li>
+    </ul>
+
+    <h3>Примеры использования CSS-свойств:</h3>
+    <pre><code>
+/* Пример использования CSS-свойств */
+div {
+width: 300px;
+height: 200px;
+background-color: lightblue;
+border: 1px solid black;
+padding: 20px;
+margin: 10px;
+text-align: center;
+}
+
+h1 {
+color: white;
+font-size: 2em;
+font-family: Arial, sans-serif;
+}
+    </code></pre>
+</div>
+
+<div class="section">
+    <h2>Модель блока (Box Model)</h2>
+    <p>
+        Модель блока — это фундаментальное понятие в CSS.  Каждый HTML-элемент рассматривается как прямоугольная коробка, состоящая из следующих частей:
+    </p>
+
+    <ul>
+        <li><strong>Content (Содержимое):</strong>  Текст, изображения и другие элементы внутри коробки.</li>
+        <li><strong>Padding (Внутренний отступ):</strong>  Пространство между содержимым и границей.</li>
+        <li><strong>Border (Граница):</strong>  Линия, окружающая содержимое и внутренний отступ.</li>
+        <li><strong>Margin (Внешний отступ):</strong>  Пространство между границей и соседними элементами.</li>
+    </ul>
+    <p><em>Источник: MDN Web Docs</em></p>
+
+    <p>
+        Понимание модели блока очень важно для правильного позиционирования и компоновки элементов на странице.
+    </p>
+</div>
+
+<div class="section">
+    <h2>Fle xbox и Grid Layout</h2>
+    <p>
+        Flexbox и Grid Layout — это мощные инструменты CSS для создания сложных и адаптивных макетов.
+    </p>
+
+    <h3>Flexbox</h3>
+    <p>
+        Flexbox предназначен для создания одномерных макетов (строк или столбцов). Он позволяет легко выравнивать и распределять элементы внутри контейнера.
+    </p>
+    <pre><code>
+/* Пример использования Flexbox */
+.container {
+display: flex;
+flex-direction: row; /* Горизонтальное расположение элементов */
+justify-content: space-around; /* Равномерное распределение элементов по горизонтали */
+align-items: center; /* Выравнивание элементов по вертикали */
+}
+
+.item {
+width: 100px;
+height: 100px;
+background-color: #ccc;
+margin: 10px;
+}
+    </code></pre>
+
+    <h3>Grid Layout</h3>
+    <p>
+        Grid Layout предназначен для создания двумерных макетов (строк и столбцов). Он позволяет создавать сложные и гибкие сетки.
+    </p>
+    <pre><code>
+/* Пример использования Grid Layout */
+.container {
+display: grid;
+grid-template-columns: repeat(3, 1fr); /* Создание 3 столбцов равной ширины */
+grid-gap: 10px; /* Расстояние между ячейками сетки */
+}
+
+.item {
+background-color: #ccc;
+padding: 20px;
+}
+    </code></pre>
+
+    <p>
+        Изучение Flexbox и Grid Layout значительно расширит ваши возможности в верстке сайтов.
+    </p>
+</div>
+
+<div class="section">
+    <h2>Советы и Ресурсы для Новичков</h2>
+
+    <ul>
+        <li><strong>Практикуйтесь!</strong> Чем больше вы пишете CSS, тем лучше вы его понимаете.</li>
+        <li><strong>Используйте инструменты разработчика в браузере.</strong> Они позволяют вам видеть, как применяются стили к элементам, и экспериментировать с CSS в режиме реального времени.  Особенно полезны вкладки "Elements" и "Console" в Chrome DevTools (открываются клавишей F12).</li>
+        <li><strong>Читайте документацию MDN Web Docs.</strong> Это самый полный и авторитетный ресурс по HTML, CSS и JavaScript.  <a href="https://developer.mozilla.org/ru/docs/Web/CSS" target="_blank">https://developer.mozilla.org/ru/docs/Web/CSS</a></li>
+        <li><strong>Смотрите видеоуроки и онлайн-курсы.</strong>  Существует множество бесплатных и платных ресурсов, которые помогут вам освоить CSS.  Например, на YouTube есть много полезных каналов.</li>
+        <li><strong>Используйте CSS Frameworks (например, Bootstrap, Tailwind CSS).</strong> Frameworks предоставляют готовые компоненты и стили, которые могут значительно ускорить разработку. Однако, сначала лучше понять основы CSS, прежде чем использовать frameworks.</li>
+    </ul>
+</div>
+    <section class="clients">
+      <h5><b>Где дизайнеру искать клиентов?</b></h5>
+       <p>Профильные сайты</p>
+		  <p>
+		  <ul>
+		<li><a href="https://illustrators.ru/jobs">Illustrators.ru. Работа для иллюстраторов</a></li>
+	        <li><a href="https://www.kadrof.ru/work/cat10">Kadrof.ru. Вакансии для дизайнеров и иллюстраторов</a></li>
+		<li><a href="https://render.ru/ru/vacancy/search">Render.ru. Вакансии</a></li>
+		<li><a href="https://www.behance.net">Behance. Творческие профессии</a></li>
+	        <li><a href="https://vc.ru">Vc.ru. Бизнес, технологии, идеи, модели роста, стартапы</a></li>
+		<li><a href="https://designer.ru">Вакансии для дизайнеров в офис</a></li>
+		</ul>
+		  </p>
+	     <section class="link">
+		     
+	<h6><b>Ссылки</b></h6>
+	<ul>
+        <li><a href="https://www.designspiration.com/">Арт-концепт</a>
+        <li><a href="https://freefrontend.com/css-animation-examples/">СSS Анимация</a>
+        <li><a href="https://uroki-css.ru/css3/css3_animations.php">СSS Aнимация</a>
+        <li><a href="https://jsitor.com/">Сайт-отладчик</a>
+	<li><a href="https://web.telegram.org/k/#@universus_neuro_bot">Нейросеть для создания фото и видео</a>
+	</ul>
+	</section>
+
+</body>
+</html>
